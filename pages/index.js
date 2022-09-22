@@ -5,10 +5,10 @@ import Footer from './components/footer/footer.js';
 
 export default function Home() {
   return (
-    <body>
+    <div className='bg-main-color border-solid border-2 border-indigo-600 h-screen flex flex-col'>
       <Header />
       <Main />
       <Footer />
-    </body>
+    </div>
   );
 }

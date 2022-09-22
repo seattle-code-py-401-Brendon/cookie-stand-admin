@@ -1,5 +1,10 @@
+import Form from './form.js';
+
 export default function Main() {
     return (
-      <p>main</p>
+      <div className='h-5/6'>
+        <Form />
+      </div>
+      
     )
   }
