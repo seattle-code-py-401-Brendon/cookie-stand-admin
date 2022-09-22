@@ -1,8 +1,14 @@
+import Header from './components/header/header.js';
+import Main from './components/main/main.js';
+import Footer from './components/footer/footer.js';
+
 
 export default function Home() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world
-    </h1>
-  )
+    <body>
+      <Header />
+      <Main />
+      <Footer />
+    </body>
+  );
 }
