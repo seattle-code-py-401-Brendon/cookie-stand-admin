@@ -1,5 +1,5 @@
 export default function Footer(){
     return (
-        <p>Footer</p>
+        <footer className="bg-footer-color text-xs font-semibold p-2">@2022</footer>
     )
 }
