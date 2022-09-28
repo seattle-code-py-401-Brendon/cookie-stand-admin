@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 export default function Form() {
 
   const [formInputs, setFormInputs] = useState({});
-  let stringifiedFormInputs = JSON.stringify(formInputs);
+  // let stringifiedFormInputs = JSON.stringify(formInputs);
 
   const handleChange = (e) => {
     let name = e.target.name;
@@ -11,6 +11,7 @@ export default function Form() {
     setFormInputs(values => ({ ...values, [name]: value }));
   }
 
+  // handle my request here
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formInputs);
@@ -42,7 +43,6 @@ export default function Form() {
         <input type='submit' />
       </form>
       <p className='font-semibold'>Data Table Coming Soon!</p>
-      <p>{stringifiedFormInputs}</p>
 
 
     </section>
