@@ -1,13 +1,5 @@
 
-
-// hardcoded object
-const store = {
-  location:'Calexico',
-  cookiesPerHour: [48, 42, 30, 24, 42, 24, 36, 42, 42, 48, 36, 42, 24, 36]
-}
-
-export default function Report() {
-
+export default function Report(props) {
   let time = [];
   let pmTime = 1;
   let noonTime = 12;
@@ -25,22 +17,20 @@ export default function Report() {
       pmTime++;
     }
   }
+
+  const location = props.stores.stores[0].location;
+
   // create a map function to render hours from loop
-  const hours = time.map((hr, index) => 
+  const hours = time.map((hr, index) =>
     <th key={index}>{hr}</th>
   )
-  const cookies = store.cookiesPerHour.map((ch, index) => 
+  const cookies = props.stores.stores[0].cookiesPerHour.map((ch, index) =>
     <td key={index}>{ch}</td>
   )
 
-  const sumCookies = store.cookiesPerHour.reduce((accumulator, current) => {
+  const sumCookies = props.stores.stores[0].cookiesPerHour.reduce((accumulator, current) => {
     return accumulator + current
   });
-
-
-  
-
-  
 
   return (
     <table>
@@ -51,10 +41,10 @@ export default function Report() {
           <th>Totals</th>
         </tr>
         <tr>
-          <td>{store.location}</td>
+          <td>{location}</td>
           {cookies}
           <td>{sumCookies}</td>
-          
+
         </tr>
       </tbody>
     </table>

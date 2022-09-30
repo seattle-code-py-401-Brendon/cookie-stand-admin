@@ -42,8 +42,6 @@ export default function Form() {
         </section>
         <input type='submit' />
       </form>
-      <p className='font-semibold'>Data Table Coming Soon!</p>
-
 
     </section>
   )

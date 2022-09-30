@@ -5,17 +5,23 @@ import Report from './reportTable.js';
 // bring in the table data from django backend deployment
 // new component that does API request? or just do in report?
 
-// create hardcoded object
-// const cookieStore = {
-//   location:'';
-// }
+export default function Main(props) {
+  function checkData(props) {
+    if (props.totalStores > 0) {
+      return <Report stores={props} />;
+    }
+    else {
+      return <h3>No Cookie Stands Available</h3>
+    }
+  }
 
-export default function Main() {
+
+
   return (
-      <div className='flex flex-col pt-10 '>
-        <Form />
-        <Report/>
-      </div>
-    
+    <div className='flex flex-col pt-10 '>
+      <Form />
+      {checkData(props)}
+    </div>
+
   )
 }
