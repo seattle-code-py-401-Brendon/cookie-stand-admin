@@ -13,7 +13,7 @@ export default function LoginForm({onLogin}){
 
     return (
         <> 
-            <h1>PLease Login</h1>
+            <h1>Please Login</h1>
             <form onSubmit={submitHandler}>
                 <input placeholder="username" name="username" />
                 <input type='password' placeholder="password" name="password" />

@@ -19,6 +19,7 @@ export default function Main(props) {
 
   return (
     <div className='flex flex-col pt-10 '>
+      <p>welcome {props.username}</p>
       <Form />
       {checkData(props)}
     </div>
